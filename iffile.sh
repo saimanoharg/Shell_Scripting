@@ -23,3 +23,12 @@ touch $filename
 echo "created $filename"
 fi
 
+if [ -x $filename ]
+then
+echo "This $filename has the execute permission"
+else 
+echo "This file $filename dont have execute permission"
+echo "Giving permissions"
+chmod x+u $filename
+echo "given permission"
+
